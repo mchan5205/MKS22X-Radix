@@ -11,4 +11,10 @@ public class Node<E>{
   public Node getNext(){
     return next;
   }
+  public E getData(){
+    return data;
+  }
+  public void setData(E da){
+    data = da;
+  }
 }

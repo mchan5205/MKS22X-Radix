@@ -1,18 +1,20 @@
 public class MyLinkedList<E>{
-  private Node start;
-  private Node end;
+  private Node<E> start;
+  private Node<E> end;
   public MyLinkedList(){
   }
   public void clear(){
     start = null;
     end = null;
   }
-  public boolean add(Node n){
+  public boolean add(Node<E> n){
     if (start == null){
       start = n;
       return true;
     }
-    end.setNext(n);
+    if (end != null){
+      end.setNext(n);
+    }  
     end = n;
     return true;
   }

@@ -10,7 +10,6 @@ public class MyLinkedList<E>{
   public boolean add(Node<E> n){
     if (start == null){
       start = n;
-      return true;
     }
     if (end != null){
       end.setNext(n);
@@ -27,8 +26,14 @@ public class MyLinkedList<E>{
     start = start.getNext();
     return temp;
   }
+  public boolean same(){
+    if (start == end && start != null){
+      return true;
+    }
+    return false;
+  }
   public boolean hasNext(){
-    if (start == end){
+    if (start == end || start == null){
       return false;
     }
     else{

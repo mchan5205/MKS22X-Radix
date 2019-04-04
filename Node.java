@@ -1,9 +1,8 @@
 public class Node<E>{
   private E data;
   private Node<E> next;
-  public Node(E da, Node<E> ne){
+  public Node(E da){
     data = da;
-    next = ne;
   }
   public void setNext(Node<E> ne){
     next = ne;

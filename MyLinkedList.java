@@ -23,8 +23,17 @@ public class MyLinkedList<E>{
     end = other.end;
   }
   public E removeFront(){
+    E temp = start.getData();
     start = start.getNext();
-    return start.getData();
+    return temp;
+  }
+  public boolean hasNext(){
+    if (start == end){
+      return false;
+    }
+    else{
+      return true;
+    }
   }
   public String toString(){
     String y = "";

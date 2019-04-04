@@ -14,7 +14,7 @@ public class MyLinkedList<E>{
     }
     if (end != null){
       end.setNext(n);
-    }  
+    }
     end = n;
     return true;
   }
@@ -25,5 +25,15 @@ public class MyLinkedList<E>{
   public E removeFront(){
     start = start.getNext();
     return start.getData();
+  }
+  public String toString(){
+    String y = "";
+    Node<E> current = start;
+    while(current != end){
+      y += current.getData() + " ";
+      current = start.getNext();
+    }
+    y += current.getData();
+    return y;
   }
 }
